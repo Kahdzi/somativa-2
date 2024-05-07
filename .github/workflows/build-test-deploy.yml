@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
-      - uses: snyk/actions/setup@master
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -25,6 +23,7 @@ jobs:
 
       - name: Run tests
         run: npm test
+        uses: snyk/actions/setup@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
