@@ -1,5 +1,5 @@
 # Use uma imagem base do Node.js com a versão desejada
-FROM node:14
+FROM node:20
 
 # Diretório de trabalho dentro do contêiner
 WORKDIR /app
